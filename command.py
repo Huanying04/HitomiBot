@@ -9,5 +9,5 @@ class Command(metaclass=abc.ABCMeta):
         self.name = ''
         self.aliases = []
 
-    def run(self, event, args: [str]):
+    def run(self, ctx, *args):
         return
