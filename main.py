@@ -28,7 +28,7 @@ if __name__ == '__main__':
     async def on_ready():
         print(f'{client.user} is ready.')
 
-    @client.command(name='test', aliases=all_cmd_name)
+    @client.command(name='', aliases=all_cmd_name)
     async def run_command(ctx, *args):
         msg = ctx.message.content
         cmd_name = msg.split(" ", 1)[0][len(prefix):]
