@@ -45,9 +45,8 @@ class RandomPixivImgCommand(Command):
         embed = discord.Embed()
         embed.title = "隨機pixiv插畫"
         embed.add_field(name="ID", value=f'[{info.get_id()}](https://www.pixiv.net/artworks/{info.get_id()})',
-                        inline=False)
-        embed.add_field(name="ID", value=f'[{info.get_id()}](https://www.pixiv.net/artworks/{info.get_id()})',
                         inline=True)
+        embed.add_field(name="頁碼", value=str(artwork_page), inline=True)
         embed.set_image(url="attachment://" + filename)
 
         await ctx.send(file=attachment, embed=embed)
