@@ -31,7 +31,7 @@ class RandomPixivImgCommand(Command):
 
         result = pixiv.search(keyword, page_for_srch, PixivSearchArtworkType.ILLUSTRATIONS, order, PixivSearchMode.SAFE,
                               PixivSearchSMode.SIMILAR, PixivSearchType.ILLUST)
-        artwork_index = random.choice(range(0, 60 + 1))
+        artwork_index = random.choice(range(0, 60))
         artwork_id = result.get_ids()[artwork_index]
         info = illustration.get_artwork_info(artwork_id)
         artwork_page = random.choice(range(0, info.get_page_count()))
